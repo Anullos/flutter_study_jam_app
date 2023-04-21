@@ -51,7 +51,7 @@ class BadgeDto {
     return BadgeDto(
       id: map['id'] as String,
       name: map['name'] as String,
-      imageUrl: map['imageUrl'] as String,
+      imageUrl: map['sprites']['other']['official-artwork']['front_default'],
       colorRGB: map['colorRGB'] as String,
     );
   }
