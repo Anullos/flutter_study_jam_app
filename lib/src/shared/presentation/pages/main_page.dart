@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../data/data_badges.dart';
 import '../../data/data_generations.dart';
 import '../../data/data_heights.dart';
 import '../../data/data_weights.dart';
+import '../config/app_images.dart';
+import '../config/app_icons.dart';
 import '../widgets/badge_widget.dart';
 import '../widgets/generation_widget.dart';
 import '../widgets/icon_widget.dart';
@@ -14,14 +17,37 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Components',
-          style: TextStyle(color: Colors.black, fontFamily: 'SF-Pro-Display'),
-        ),
-      ),
       body: CustomScrollView(
-        slivers: [
+        slivers: <Widget>[
+          SliverAppBar(
+            pinned: true,
+            backgroundColor: Theme.of(context).canvasColor,
+            expandedHeight: 120,
+            actions: <Widget>[
+              IconButton(
+                icon: SvgPicture.asset(AppIcons.generation),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: SvgPicture.asset(AppIcons.filter),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: SvgPicture.asset(AppIcons.sort),
+                onPressed: () {},
+              ),
+            ],
+            flexibleSpace: FlexibleSpaceBar(
+              title: const Text(
+                  style: TextStyle(
+                      color: Colors.black87, fontFamily: 'SF-Pro-Display'),
+                  'Pokédex'),
+              titlePadding: const EdgeInsets.all(20.0),
+              background: SvgPicture.asset(AppImages.pokeballHeader,
+                  colorFilter: const ColorFilter.mode(
+                      Color(0xFFF5F5F5), BlendMode.srcIn)),
+            ),
+          ),
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.only(top: 12, left: 20.0, bottom: 8),

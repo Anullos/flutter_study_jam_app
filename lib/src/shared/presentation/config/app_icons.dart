@@ -24,5 +24,8 @@ class AppIcons {
   static const String weightsOne = 'assets/icons/svgs/Weights_one.svg';
   static const String weightsTwo = 'assets/icons/svgs/Weights_two.svg';
   static const String weightsThree = 'assets/icons/svgs/Weights_three.svg';
+  static const String generation = 'assets/icons/svgs/Generation.svg';
+  static const String filter = 'assets/icons/svgs/Filter.svg';
+  static const String sort = 'assets/icons/svgs/Sort.svg';
   // PNGs
 }

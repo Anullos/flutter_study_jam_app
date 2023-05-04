@@ -2,6 +2,7 @@ class AppImages {
   // SVGs
   static const String pattern = 'assets/images/svgs/Pattern.svg';
   static const String pokeball = 'assets/images/svgs/Pokeball.svg';
+  static const String pokeballHeader = 'assets/images/svgs/PokeballHeader.svg';
   // PNGs
   static const String bulbasaur = 'assets/images/001.png';
   static const String charmander = 'assets/images/004.png';
